@@ -19,8 +19,7 @@ const getSum = () => {
     totalCell.textContent = `Total Price: Rs.${totalPrice.toFixed(2)}`;
     totalRow.appendChild(totalCell);
 
-    // Append the totalRow to the table
-    document.querySelector('table').appendChild(totalRow);
+ 
 };
 
 getSumBtn.addEventListener("click", getSum);
