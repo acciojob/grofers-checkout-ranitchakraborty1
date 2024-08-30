@@ -5,10 +5,10 @@ document.body.appendChild(getSumBtn);
 const getSum = () => {
 //Add your code here
 	
-	   const prices = document.querySelectorAll('.price');
+	   const allprices = document.querySelectorAll('.price');
 	let totalPrice= 0;
 	   // Loop through each price and add it to the total
-    for( let price of totalPrice) {
+    for( let price of allPrices) {
         totalPrice += Number(price.textContent);
     };
 	
@@ -16,9 +16,11 @@ const getSum = () => {
     const totalCell = document.createElement('td');
 	
 	    // Set the text content to show the total price
-    totalCell.textContent = `Total Price: Rs.${totalPrice.toFixed()}`;
+    totalCell.textContent = `${totalPrice}`;
     totalRow.appendChild(totalCell);
-
+	
+ let table = document.querySelector('table');
+	table.appendChild(totalRow);
  
 };
 
